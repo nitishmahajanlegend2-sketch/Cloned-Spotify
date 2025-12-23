@@ -41,14 +41,14 @@ async function getSongs(folder){
     songUl.innerHTML=""
     for (const song of songs) {
         songUl.innerHTML=songUl.innerHTML + `<li>
-                            <img class="invert" src="music.svg" alt="">
+                            <img class="invert" src="/music.svg" alt="">
                             <div class="info">
                                 <div>${song.replaceAll("%20"," ")}</div>
                                 <div></div>
                             </div>
                             <div class="playnow">
                                 <span>Play Now</span>
-                                <img class="invert playnowd" src="play.svg" alt="">
+                                <img class="invert playnowd" src="/play.svg" alt="">
                             </div>
                             
                         </li>`
@@ -80,7 +80,7 @@ const playMusic=(track,pause=false)=>{
     currentSong.src=`/${currfolder}/`+track
     if(!pause){
         currentSong.play();
-         play.src="pause.svg";
+         play.src="/pause.svg";
     }
     
    
